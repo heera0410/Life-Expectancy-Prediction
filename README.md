@@ -12,7 +12,10 @@
 
 ## PRE REQUISITES
     -- The file requirements.txt contains all the requisites to be installed.
-    -- You can run  ``` pip install -r requirements.txt ``` in the terminal to install all the packages.
+    -- You can run the following command in the terminal to install all the packages.
+    ``` 
+        pip install -r requirements.txt 
+    ```
 
 ## STRUCTURE OF THE APP
     -- static folder contains the required css and image files.
@@ -22,8 +25,12 @@
 
 ## WORKING
     -- Navigate to the project folder and run
-        ``` python3 app.py ```
+        ``` 
+            python3 app.py 
+        ```
     -- The server is running at
-         ```http://127.0.0.1:5000```
+         ```
+             http://127.0.0.1:5000
+         ```
 
 
