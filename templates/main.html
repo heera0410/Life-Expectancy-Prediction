@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!--Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Predict Life Expectancy</title>
+    </head>
+    <body>
+        <header class="jumbotron">
+            <div class="container">
+                <div class="row row-header ">
+                    <div class="col-12 col-sm-6">
+                        <h1>Life Expectancy Prediction</h1>
+                        <p>Linear regression model is used to predict life expectancy based on the input features below</p>
+                    </div>
+                    <div class="col-sm-3 align-self-center">
+                        <img src="{{ url_for('static', filename='css/LinearRegression.png') }}" class="img-fluid">
+                    </div>
+    
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="col-sm">
+                <div class="card">
+                    
+                        <div class="row-content card-body">
+                            <form action="/predict" method="post">
+                                <dl class="row bg-info">
+                                    <dt class="col-6" >Year</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Year" name="Year"></dd>
+                                    <dt class="col-6" >Status</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Status" name="Status"></dd>
+                                    <dt class="col-6" >Adult Morality</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Adult Mortality" name="Adult Mortality"></dd>
+                                    <dt class="col-6" >infant deaths</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="infant deaths" name="infant deaths"></dd>
+                                    <dt class="col-6" >Alcohol</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Alcohol" name="Alcohol"></dd>
+                                    <dt class="col-6" >percentage expenditure</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="percentage expenditure" name="percentage expenditure"></dd>
+                                    <dt class="col-6" >Hepatitis B</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Hepatitis B" name="Hepatitis B"></dd>
+                                    <dt class="col-6">Measles</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Measles" name="Measles"></dd>
+                                    <dt class="col-6" >BMI</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="BMI" name="BMI"></dd>
+                                    <dt class="col-6" >under-five deaths</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="under-five deaths" name="under-five deaths"></dd>
+                                    <dt class="col-6" >Polio</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Polio" name="Polio"></dd>
+                                    <dt class="col-6" >Total expenditure</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Total expenditure" name="Total expenditure"></dd>
+                                    <dt class="col-6" >Diphtheria</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Diphtheria" name="Diphtheria"></dd>
+                                    <dt class="col-6" >HIV/AIDS</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="HIV/AIDS" name="HIV/AIDS"></dd>
+                                    <dt class="col-6" >GDP</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="GDP" name="GDP"></dd>
+                                    <dt class="col-6">Population</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Population" name="Population"></dd>
+                                    <dt class="col-6" >thinness 1-19 years</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="thinness 1-19 years" name="thinness 1-19 years"></dd>
+                                    <dt class="col-6" >thinness 5-9 years</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="thinness 5-9 years" name="thinness 5-9 years"></dd>
+                                    <dt class="col-6" >Income composition of resources</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Income composition of resources" name="Income composition of resources"></dd>
+                                    <dt class="col-6" >Schooling</dt>
+                                    <dd class="col-6"> <input type="text" placeholder="Schooling" name="Schooling"></dd>
+                                   
+                                    <dd class="offset-6 col-6"> <input class="btn btn-md" type="submit" value="Predict"></dd>
+                                </dl>
+                            </form> 
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+       
+        
+    </body>
+    <div class="footer">
+         <div class= "offset-5">
+               <p>{{data}}</p>
+         </div>
+    </div>
+</html>
